@@ -1,39 +1,13 @@
-class Calculator{
-    constructor(previousTextElement, currentTextElement){
-        this.previousTextElement = previousTextElement
-        this.currentTextElement = currentTextElement
-        this.clear()
-    }  
-    clear(){
-        this.currentOperand = ' '
-        this.previousOperand = ' '
-        this.operation = undefined 
+let sum=document.getElementById('input');
 
-    }
-
-    appendNumber(number){
-
-    }
-
-    operation(operation){
-
-    }
-
-    compute(){
-
-    }
-
-    updateDisplay(){
-
-    }
-
+function display(output){
+    sum.value+=output;
 }
 
+function clean(){
+    sum.value='';
+}
 
-const numberButtons = document.querySelectorAll('[.number]')
-const operatorButtons = document.querySelectorAll('[.operator]')
-const equalButton = document.querySelectorAll('[.equal]')
-const clearButton = document.querySelectorAll('[.clear]')
-const previousTextElement = document.querySelectorAll('[.previousOperand]')
-const currentTextElement = document.querySelectorAll('[.currentOperand]')
-
+function calculate(){
+    sum.value=eval(sum.value);
+}
